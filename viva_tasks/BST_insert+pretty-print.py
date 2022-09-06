@@ -104,7 +104,7 @@ class BinaryTree:
         return lines, n + m + u, max(p, q) + 2, n + u // 2
 
 
-    def find_i(self, target):
+    def find_i(self, target):  # Find interatively 
         cur_node = self.root
         while cur_node != None:
             if cur_node.data == target: 
@@ -116,7 +116,7 @@ class BinaryTree:
         return False
 
     ''''''
-    def find_r(self, target):
+    def find_r(self, target):   # Find recursively
         if self.root:                                           # root has value
             if self._find_r(target,self.root):
                 return True
@@ -132,7 +132,7 @@ class BinaryTree:
         if target == cur_node.data:
             return True
 
-    def remove(self, target):
+    def remove(self, target):  
         if self.root is None:
             return False
         elif self.root.data == target:
